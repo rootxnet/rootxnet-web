@@ -1,5 +1,5 @@
-from django.shortcuts import render
 import os
+from django.shortcuts import render
 from django.conf import settings
 from django.http import Http404
 from django.template import Template
@@ -19,6 +19,7 @@ def get_page_or_404(name):
     with open(file_path, 'r') as f:
         page = Template(f.read())
     return page
+
 
 def page(request, slug):
     file_name = "{}.html".format(slug)
