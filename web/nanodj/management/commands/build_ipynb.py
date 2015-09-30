@@ -6,6 +6,9 @@ from django.conf import settings
 
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
+        if not os.path.exists(settings.PAGE_BUILD_DIR):
+            os.mkdir(settings.PAGE_BUILD_DIR)
+
         for ipynb_file in os.listdir(settings.PAGE_SOURCE_DIR):
             full_path = os.path.join(settings.PAGE_SOURCE_DIR, ipynb_file)
             print full_path
