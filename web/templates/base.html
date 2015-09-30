@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% for page in all_ipynb_pages %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endfor %}
+    <hr/>
+    {% block content %}{% endblock %}
+</body>
+</html>
