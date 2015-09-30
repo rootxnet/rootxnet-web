@@ -1,8 +1,8 @@
-RUN echo 00001  # increment to invalidate docker cache
-
 # Set the base image to use to Ubuntu
 FROM ubuntu:14.04
 MAINTAINER Michal Lech "rootx@rootxnet.com"
+
+RUN echo 00001  # increment to invalidate docker cache
 
 ENV APP_SRCDIR=web
 ENV APP_HOMEDIR=/opt/rootxnet-web
