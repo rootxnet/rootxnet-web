@@ -12,9 +12,11 @@ class Command(BaseCommand):
         for ipynb_file in os.listdir(settings.PAGE_SOURCE_DIR):
             full_path = os.path.join(settings.PAGE_SOURCE_DIR, ipynb_file)
             print full_path
-            subprocess.Popen(
+            popen = subprocess.Popen(
                 args=["nbconvert", "--to=html", "--template=basic", full_path],
                 cwd=settings.PAGE_BUILD_DIR,
                 executable="jupyter",
-                shell=True
+                shell=True,
+                stdout=subprocess.PIPE
             )
+            print popen.stdout.read()
