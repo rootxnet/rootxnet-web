@@ -6,7 +6,6 @@ from django.core.wsgi import get_wsgi_application
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 settings.configure(
     DEBUG=True,
-    SECRET_KEY='b0m#G$9j#4g&^jdf0o8fyxf+ox(le3ofij043f!=7!+wxj0',
     ROOT_URLCONF='urls',
     MIDDLEWARE_CLASSES=(),
     INSTALLED_APPS=(
