@@ -5,7 +5,8 @@ from django.core.wsgi import get_wsgi_application
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 settings.configure(
-    DEBUG=True,
+    DEBUG=os.environ.get("NANO_DEBUG", False),
+    ALLOWED_HOSTS=["*", ],
     ROOT_URLCONF='urls',
     MIDDLEWARE_CLASSES=(),
     INSTALLED_APPS=(
