@@ -4,13 +4,14 @@ from django.conf import settings
 from django.http import Http404
 from django.template import Template
 from django.utils._os import safe_join
+from django.core.exceptions import SuspiciousFileOperation
 
 
 def get_page_or_404(name):
     """Return page content as a Django template or raise 404 error."""
     try:
         file_path = safe_join(settings.PAGE_BUILD_DIR, name)
-    except ValueError:
+    except SuspiciousFileOperation:
         raise Http404('Page Not Found')
     else:
         if not os.path.exists(file_path):
