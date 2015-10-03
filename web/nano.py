@@ -16,7 +16,7 @@ settings.configure(
         'nanodj',
     ),
     STATIC_URL='/static/',
-    TEMPLATE_DIRS=["templates", ],
+    TEMPLATE_DIRS=[os.path.join(BASE_PATH, "templates"), ],
     TEMPLATE_CONTEXT_PROCESSORS=["nanodj.context_processors.all_ipynb_pages", ],
     PAGE_SOURCE_DIR=os.path.join(BASE_PATH, "source"),
     PAGE_BUILD_DIR=os.path.join(BASE_PATH, "build"),
