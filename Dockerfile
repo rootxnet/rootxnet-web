@@ -17,6 +17,8 @@ COPY $APP_SRCDIR $APP_HOMEDIR/web
 WORKDIR $APP_HOMEDIR
 RUN virtualenv --no-site-packages .env
 COPY ./requirements.txt ./
+COPY ./setup.py ./
+COPY ./tox.ini ./
 RUN . ./.env/bin/activate && pip install --upgrade -r requirements.txt
 WORKDIR $APP_HOMEDIR/web
 RUN . ../.env/bin/activate && python nano.py build_ipynb
