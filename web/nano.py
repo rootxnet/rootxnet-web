@@ -5,6 +5,7 @@ from django.core.wsgi import get_wsgi_application
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 settings.configure(
+    BASE_PATH=BASE_PATH,
     DEBUG=os.environ.get("NANO_DEBUG", False),
     ALLOWED_HOSTS=["*", ],
     ROOT_URLCONF='urls',
@@ -19,6 +20,13 @@ settings.configure(
     TEMPLATE_CONTEXT_PROCESSORS=["nanodj.context_processors.all_ipynb_pages", ],
     PAGE_SOURCE_DIR=os.path.join(BASE_PATH, "source"),
     PAGE_BUILD_DIR=os.path.join(BASE_PATH, "build"),
+    # Needed for tests
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+        }
+    }
+
 )
 
 if __name__ == "__main__":
