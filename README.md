@@ -1,4 +1,7 @@
-# rootxnet-web [WIP]
+rootxnet-web
+============
+[![Requirements Status](https://requires.io/github/rootxnet/rootxnet-web/requirements.svg?branch=master)](https://requires.io/github/rootxnet/rootxnet-web/requirements/?branch=master)
+
 The source code of http://www.rootxnet.com/ website.
 
 This project serves as a playgrond for some of my ideas:
