@@ -1,0 +1,275 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans);*/
+/*@import url(https://fonts.googleapis.com/css?family=Coustard);*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Inconsolata';*/
+
+    /*letter-spacing: 2px;*/
+}
+
+.jumbotron {
+    min-height: 150px;
+    max-height: 200px;
+    margin-bottom: 0;
+    background: url("/static/img/header-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#profile {
+    margin: 0 auto;
+    max-width: 988px;
+    font-family: 'Inconsolata';
+}
+
+#profile-avatar {
+    margin-top: -40px;
+}
+
+#profile-avatar img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 119px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    width: 125px;
+    height: 125px;
+}
+
+#profile-description {
+    width: 75%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#profile-experience li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.profile-skills li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+#profile-experience li .date,
+.profile-skills li .date {
+    float: right;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.profile-skills li .date {
+    margin-top: 13px;
+}
+
+#profile-experience li h3,
+.profile-skills li h3 {
+    float: left;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-skills li h3 {
+    font-size: 16px;
+}
+
+.profile-skills li p {
+    clear: both;
+}
+
+#profile-experience li h4 {
+    clear: both;
+    font-style: italic;
+    font-size: 16px;
+}
+
+#profile-experience li .tech,
+.profile-skills li .tech {
+    clear: both;
+    padding: 0;
+}
+
+#profile-experience li .tech li,
+.profile-skills li .tech li {
+    display: inline-block;
+    background: #F6F7FA;
+    padding: 1px 5px;
+    margin: 2px 1px;
+    border: 1px solid #D9DCE9;
+}
+
+#content-header {
+    background: #F6F7FA;
+    border-top: 1px solid #D9DCE9;
+    border-bottom: 1px solid #D9DCE9;
+    padding: 20px 0;
+    text-align: center;
+    color: #5C5029;
+    font-size: 1.25em;
+}
+
+#content-header > .wrapper {
+    max-width: 899px;
+    margin: 0 auto;
+}
+
+#content {
+    max-width: 899px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+#blog {
+
+}
+
+#blog .blog-post {
+    padding: 15px 0;
+    border-bottom: 1px solid #495A6C;
+}
+
+#blog .blog-post:last-child {
+    border-bottom: none;
+}
+
+#blog .blog-post a,
+#blog .blog-post a:hover,
+#blog .blog-post a:visited {
+    font-size: 2em;
+    color: #5C5029;
+    text-decoration: none;
+}
+
+#blog .blog-post a:hover {
+    color: #333;
+}
+
+.navbar {
+    border: none;
+    border-top: 3px #1D2C3C solid;
+    border-radius: 0;
+    background: #fff;
+    padding: 20px 20px 17px;
+}
+
+.navbar-brand {
+    font-family: 'Inconsolata';
+}
+
+.navbar-brand span {
+    display: block;
+    color: #5C5029;
+    font-weight: 600;
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    position: relative;
+}
+
+.navbar-brand span:before,
+.navbar-brand span:after {
+    -webkit-transition: 0.2s ease color;
+    -moz-transition: 0.2s ease color;
+    -o-transition: 0.2s ease color;
+    transition: 0.2s ease color;
+    content: "{";
+    color: #1D2C3C;
+    font-weight: 400;
+    font-size: 2em;
+    position: absolute;
+    right: 100%;
+    top: -12px;
+    line-height: 48px;
+}
+
+.navbar-brand span:after {
+    content: "}";
+    left: 100%;
+}
+
+.navbar-nav li {
+    margin-left: 35px;
+    font-size: 1.25em;
+    margin-top: 4px;
+}
+
+.navbar > .container-fluid {
+    max-width: 899px;
+    margin: 0 auto;
+}
+
+.navbar-default .navbar-collapse {
+    border-top: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #5C5029
+
+}
+
+body#page-home .page-home a,
+body#page-blog .page-blog a,
+body#page-contact .page-contact a {
+    background-color: #fff;
+    padding-bottom: 2px;
+    border-bottom: 3px solid #1D2C3C;
+}
+
+#footer {
+    background: #1D2C3C;
+    color: #fff;
+}
+
+#footer > .row {
+    padding: 35px 0;
+    max-width: 899px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer > .row a,
+#footer > .row a:hover,
+#footer > .row a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+
+}
+
+#footer > .row strong {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 6.75px;
+    padding: 10px 13px;
+    font-weight: normal;
+}
+
+#footer > .row a strong:hover {
+    background: #fff;
+    color: #1D2C3C;
+}
+
+#footer > #legal {
+    background: #11202F;
+    line-height: 20px;
+    padding: 7px 0;
+    text-align: center;
+}
+
+#footer > #legal span {
+    display: block;
+    max-width: 899px;
+    margin: 0 auto;
+}
+
+/* Unobfuscate email */
+.enc-email:before {
+    content: attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
