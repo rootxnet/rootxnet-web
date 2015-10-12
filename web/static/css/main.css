@@ -114,12 +114,12 @@ body {
 }
 
 #content-header > .wrapper {
-    max-width: 899px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
 #content {
-    max-width: 899px;
+    max-width: 970px;
     margin: 0 auto;
     padding: 15px 0;
 }
@@ -199,7 +199,7 @@ body {
 }
 
 .navbar > .container-fluid {
-    max-width: 899px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
@@ -227,7 +227,7 @@ body#page-contact .page-contact a {
 
 #footer > .row {
     padding: 35px 0;
-    max-width: 899px;
+    max-width: 970px;
     margin: 0 auto;
     text-align: center;
 }
@@ -263,7 +263,7 @@ body#page-contact .page-contact a {
 
 #footer > #legal span {
     display: block;
-    max-width: 899px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
