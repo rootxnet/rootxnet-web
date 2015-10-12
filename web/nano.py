@@ -11,11 +11,12 @@ settings.configure(
     ROOT_URLCONF='urls',
     MIDDLEWARE_CLASSES=(),
     INSTALLED_APPS=(
-        # 'django.contrib.staticfiles',
+        'django.contrib.staticfiles',
         # 'django.contrib.webdesign',
         'nanodj',
     ),
     STATIC_URL='/static/',
+    STATICFILES_DIRS=[os.path.join(BASE_PATH, "static"), ],
     TEMPLATE_DIRS=[os.path.join(BASE_PATH, "templates"), ],
     TEMPLATE_CONTEXT_PROCESSORS=["nanodj.context_processors.all_ipynb_pages", ],
     PAGE_SOURCE_DIR=os.path.join(BASE_PATH, "source"),
@@ -34,4 +35,6 @@ if __name__ == "__main__":
 
     execute_from_command_line(sys.argv)
 else:
+    from whitenoise.django import DjangoWhiteNoise
     application = get_wsgi_application()
+    application = DjangoWhiteNoise(application)
