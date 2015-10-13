@@ -15,7 +15,8 @@ body {
 
 #profile {
     margin: 0 auto;
-    max-width: 988px;
+    max-width: 970px;
+    padding: 0 15px;
     font-family: 'Inconsolata';
 }
 
@@ -111,13 +112,14 @@ body {
 
 #content-header > .wrapper {
     max-width: 970px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
 #content {
     max-width: 970px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 #blog {
@@ -150,11 +152,16 @@ body {
     border-top: 3px #1D2C3C solid;
     border-radius: 0;
     background: #fff;
-    padding: 20px 20px 17px;
+    padding: 20px 17px 17px;
 }
 
-.navbar-brand {
+.navbar-right {
+    margin-right: -30px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     font-family: 'Inconsolata';
+    margin-left: 10px;
 }
 
 .navbar-brand span {
@@ -194,8 +201,19 @@ body {
     margin-top: 4px;
 }
 
+.navbar-collapse.collapsing .navbar-nav li,
+.navbar-collapse.in .navbar-nav li {
+    margin-left: 0;
+}
+
+.navbar-toggle {
+    margin-top: 15px;
+    margin-right: 0;
+}
+
 .navbar > .container-fluid {
     max-width: 970px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -208,11 +226,23 @@ body {
 
 }
 
+body#page-home .navbar-collapse.in .page-home a,
+body#page-home .navbar-collapse.collapsing .page-home a,
+body#page-blog .navbar-collapse.in .page-blog a,
+body#page-blog .navbar-collapse.collapsing .page-blog a,
+body#page-contact .navbar-collapse.in .page-contact a,
+body#page-contact .navbar-collapse.collapsing .page-contact a {
+    background-color: #1D2C3C;
+    padding-bottom: 10px;
+    border-bottom: none;
+    color: #fff;
+}
+
 body#page-home .page-home a,
 body#page-blog .page-blog a,
 body#page-contact .page-contact a {
     background-color: #fff;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border-bottom: 3px solid #1D2C3C;
 }
 
@@ -222,7 +252,7 @@ body#page-contact .page-contact a {
 }
 
 #footer > .row {
-    padding: 35px 0;
+    padding: 35px 15px;
     max-width: 970px;
     margin: 0 auto;
     text-align: center;
@@ -260,6 +290,7 @@ body#page-contact .page-contact a {
 #footer > #legal span {
     display: block;
     max-width: 970px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
