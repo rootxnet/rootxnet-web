@@ -11,7 +11,8 @@
     <section id="blog">
         {% for page in all_ipynb_pages %}
             <article class="blog-post">
-                <a href="{{ page.url }}">{{ page.title }}</a>
+                <a href="{{ page.url }}">{% if page.metadata.publisher.title %}{{ page.metadata.publisher.title }}{% else %}{{ page.title }}{% endif %}</a>
+                <p>{{ page.metadata.publisher.short }}</p>
             </article>
         {% endfor %}
     </section>
