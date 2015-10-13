@@ -29,6 +29,22 @@
 </script>
 {% endblock %}
 
+{% block content_header %}
+    <a href="{{ page.url }}">
+        <h2>{% if page.metadata.publisher.title %}{{ page.metadata.publisher.title }}{% else %}{{ page.title }}{% endif %}</h2>
+    </a>
+    <p>{{ page.metadata.publisher.short }}</p>
+{% endblock %}
+
+{% if page.metadata %}
+{% block content_header_extra %}
+    <ul class="ipynb-metadata">
+    <li>{% if page.metadata.language_info.version %}Language: <b>Python {{ page.metadata.language_info.version }}</b>{% endif %}</li>
+    <li>{% if page.metadata.language_info.codemirror_mode.version %}IPython: <b>{{ page.metadata.language_info.codemirror_mode.version }}</b>{% endif %}</li>
+    </ul>
+{% endblock %}
+{% endif %}
+
 {% block content %}
-    {% include page %}
+    {% include page.html %}
 {% endblock %}
