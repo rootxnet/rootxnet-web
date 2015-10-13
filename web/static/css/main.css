@@ -5,6 +5,14 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    color: #697392;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .jumbotron {
     min-height: 150px;
     max-height: 200px;
