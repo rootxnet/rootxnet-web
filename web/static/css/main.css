@@ -146,9 +146,7 @@ a:hover {
 #blog .blog-post a,
 #blog .blog-post a:hover,
 #blog .blog-post a:visited {
-    font-size: 2em;
-    color: #5C5029;
-    text-decoration: none;
+    font-size: 20px;
 }
 
 #blog .blog-post a:hover {
