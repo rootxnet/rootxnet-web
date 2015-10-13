@@ -111,17 +111,33 @@ a:hover {
 #content-header {
     background: #F6F7FA;
     border-top: 1px solid #D9DCE9;
-    border-bottom: 1px solid #D9DCE9;
     padding: 20px 0;
     text-align: center;
     color: #5C5029;
     font-size: 1.25em;
 }
 
-#content-header > .wrapper {
+#content-header > .wrapper,
+#content-header-extra > .wrapper {
     max-width: 970px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+#content-header-extra {
+    background: #697392;
+    color: #fff;
+    padding: 5px 0;
+}
+
+#content-header-extra .ipynb-metadata {
+    margin: 0;
+    padding: 0;
+}
+
+#content-header-extra .ipynb-metadata li {
+    display: inline-block;
+    margin: 0 5px;
 }
 
 #content {
