@@ -4,7 +4,7 @@ rootxnet-web
 
 The source code of http://www.rootxnet.com/ website.
 
-This project serves as a playgrond for some of my ideas:
+This project serves as a playground for some of my ideas:
 
 ### NanoDJ:
 IPython Notebook publishing platform, it makes easier to keep .ipynb along with all includes in one 
@@ -20,7 +20,7 @@ Additional information like tags, title, short description can be added to the .
 }
 ```
 
-These tasks can be automatized with included tools:
+Tasks which can be automated with included tools:
 * compilation to html
 * metadata extraction
 * testing
@@ -57,10 +57,10 @@ cd testproj
 # build the container and name it testproj
 docker build -t testproj .
 
-# run the container, make port 8000 accessible from host, name the instance as testproj.instance
-docker run --publish=8000:8000 --name=testproj.instance -t testproj:latest
+# run the container, make port 8000 accessible on localhost, name the instance as testproj.instance
+docker run --publish=127.0.0.1:8000:8000 --name=testproj.instance -t testproj:latest
 ```
-From now on the website will be available at the http://<host IP>:8000
+From now on, the website will be available at the http://127.0.0.1:8000/
 
 ### Testing
 Docker can also be used to test the project:
