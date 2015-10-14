@@ -14,7 +14,7 @@ class NanoTest(TestCase):
     def test_get_page_or_404(self):
         # check if the file was properly loaded
         t1 = get_page_or_404("test.html")
-        r = t1.render(Context())
+        r = t1["html"].render(Context())
         self.assertInHTML(r, "INNER_1234567890")
 
         with self.assertRaises(Http404):
