@@ -252,7 +252,16 @@ a:hover {
 
 .navbar-default .navbar-nav > li > a {
     color: #5C5029
+}
 
+.navbar-default .navbar-nav > li.page-resume a {
+    border: 2px solid #1D2C3C;
+    border-radius: 6.75px;
+}
+
+.navbar-default .navbar-nav > li.page-resume a:hover {
+    color: #fff;
+    background: #1D2C3C;
 }
 
 body#page-home .navbar-collapse.in .page-home a,
