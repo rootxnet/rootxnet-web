@@ -10,11 +10,14 @@ settings.configure(
     DEBUG=NANO_DEBUG,
     ALLOWED_HOSTS=["*", ],
     ROOT_URLCONF='urls',
-    MIDDLEWARE_CLASSES=(),
+    MIDDLEWARE_CLASSES=(
+        "django.middleware.csrf.CsrfViewMiddleware",
+    ),
     INSTALLED_APPS=(
         'django.contrib.staticfiles',
         # 'django.contrib.webdesign',
         'nanodj',
+        'contactform',
     ),
     STATIC_URL='/static/',
     STATIC_ROOT=None if NANO_DEBUG else os.path.join(BASE_PATH, "static"),
@@ -28,8 +31,13 @@ settings.configure(
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
         }
-    }
-
+    },
+    EMAIL_HOST=os.environ.get("NANO_EMAIL_HOST", None),
+    EMAIL_PORT=os.environ.get("NANO_EMAIL_PORT", None),
+    EMAIL_HOST_USER=os.environ.get("NANO_EMAIL_HOST_USER", None),
+    EMAIL_HOST_PASSWORD=os.environ.get("NANO_EMAIL_HOST_PASSWORD", None),
+    EMAIL_USE_TLS=os.environ.get("NANO_EMAIL_USE_TLS", None),
+    EMAIL_RECIPIENTS=map(str.strip, os.environ.get("NANO_EMAIL_RECIPIENTS", "").split(","))
 )
 
 if __name__ == "__main__":

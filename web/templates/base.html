@@ -33,8 +33,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="page-home"><a href="/"><span>Home</span></a></li>
                 <li class="page-blog"><a href="{% url "blog" %}"><span>Blog</span></a></li>
+                <li class="page-contact"><a href="{% url "contact" %}"><span>Contact</span></a></li>
                 <li class="page-resume"><a href="{% url "download_resume" %}"><span>Download Resume / CV</span></a></li>
-                {#<li class="page-contact"><a href="#"><span>Contact</span></a></li>#}
             </ul>
         </div>
     </div>
@@ -63,7 +63,7 @@
 <footer id="footer">
     <div class="row">
         <a href="#">
-            Let's work together. <strong>Get in touch</strong>
+            Let's work together. <a href="{% url "contact" %}"><strong>Get in touch</strong></a>
         </a>
     </div>
     <div id="legal">

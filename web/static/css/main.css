@@ -332,6 +332,27 @@ body#page-contact .page-contact a {
     margin: 0 auto;
 }
 
+#form-contact .form-control,
+#form-contact button {
+    font-size: 20px;
+}
+
+#form-contact .form-control {
+    border-width: 2px;
+    border-radius: 0;
+}
+
+#form-contact button[type=submit] {
+    margin: 0 auto;
+    background: #11202F;
+    width: 220px;
+    display: block;
+}
+
+#form-contact button[type=submit]:hover {
+    background: #1D2C3C;
+}
+
 /* Unobfuscate email */
 .enc-email:before {
     content: attr(data-domain) "\0040" attr(data-user);
