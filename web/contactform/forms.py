@@ -19,7 +19,7 @@ class ContactForm(forms.Form):
 
         # Make it async for the sake of responsibility
         p = Process(target=send_mail, kwargs={
-            "subject": u"[rootxnet.com] message from: {}".format(name),
+            "subject": u"[rootxnet.com] message from: {}({})".format(name, email),
             "from_email": email,
             "message": message,
             "recipient_list": settings.EMAIL_RECIPIENTS,
