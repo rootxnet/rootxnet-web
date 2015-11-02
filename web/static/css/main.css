@@ -332,6 +332,11 @@ body#page-contact .page-contact a {
     margin: 0 auto;
 }
 
+#form-contact {
+    border-top: 1px solid #D9DCE9;
+    margin-top: 25px;
+}
+
 #form-contact .form-control,
 #form-contact button {
     font-size: 20px;
@@ -351,6 +356,21 @@ body#page-contact .page-contact a {
 
 #form-contact button[type=submit]:hover {
     background: #1D2C3C;
+}
+
+.contact-listing {
+    padding: 0;
+}
+
+.contact-listing li {
+    display: inline-block;
+    padding: 0 115px 0 0;
+    margin-bottom: 5px;
+    line-height: 42px;
+}
+
+.contact-listing li a {
+    display: block;
 }
 
 /* Unobfuscate email */
