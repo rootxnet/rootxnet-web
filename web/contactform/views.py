@@ -15,11 +15,7 @@ class ContactView(FormView):
         form.send_email()
         return super(ContactView, self).form_valid(form)
 
-    def get(self, request, *args, **kwargs):
-        self.message_sent = request.GET.get("message_sent", False)
-        return super(ContactView, self).get(request, *args, **kwargs)
-
     def get_context_data(self, **kwargs):
         context = super(ContactView, self).get_context_data(**kwargs)
-        context["message_sent"] = self.message_sent
+        context["message_sent"] = self.request.GET.get("message_sent", False)
         return context
