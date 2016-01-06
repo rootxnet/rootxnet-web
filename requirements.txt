@@ -1,5 +1,5 @@
-Django==1.8.6
+Django==1.9.1
 jupyter==1.0.0
-gunicorn==19.3.0
+gunicorn==19.4.5
 whitenoise==2.0.6
-tox==2.2.1
+tox==2.3.1
