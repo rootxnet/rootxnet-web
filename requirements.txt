@@ -2,4 +2,4 @@ Django==1.11.4
 jupyter==1.0.0
 gunicorn==19.7.1
 whitenoise==3.3.0
-tox==2.8.0
+tox==2.8.1
