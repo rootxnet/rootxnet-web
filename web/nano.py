@@ -22,8 +22,18 @@ settings.configure(
     STATIC_URL='/static/',
     STATIC_ROOT=None if NANO_DEBUG else os.path.join(BASE_PATH, "static"),
     STATICFILES_DIRS=[os.path.join(BASE_PATH, "static"), ],
-    TEMPLATE_DIRS=[os.path.join(BASE_PATH, "templates"), ],
-    TEMPLATE_CONTEXT_PROCESSORS=["nanodj.context_processors.all_ipynb_pages", ],
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                os.path.join(BASE_PATH, "templates"),
+            ],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                "context_processors": ["nanodj.context_processors.all_ipynb_pages", ]
+            },
+        },
+    ],
     PAGE_SOURCE_DIR=os.path.join(BASE_PATH, "source"),
     PAGE_BUILD_DIR=os.path.join(BASE_PATH, "build"),
     # Needed for tests

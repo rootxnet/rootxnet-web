@@ -20,13 +20,13 @@ class Command(BaseCommand):
             with open(full_path) as source:
                 metadata = json.loads(source.read()).get("metadata")
                 with io.open(output_meta_path, 'w', encoding='utf-8') as out:
-                    out.write(unicode(json.dumps(metadata, ensure_ascii=False)))
+                    out.write(json.dumps(metadata, ensure_ascii=False))
 
             popen = subprocess.Popen(
-                args=["nbconvert", "--to=html", "--template=basic", full_path],
+                args=["nbconvert", "--to=html", "--template=basic", "--output-dir=.", full_path],
                 cwd=settings.PAGE_BUILD_DIR,
                 executable="jupyter",
                 shell=True,
                 stdout=subprocess.PIPE
             )
-            print popen.stdout.read()
+            print(popen.stdout.read())
