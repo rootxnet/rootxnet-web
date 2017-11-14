@@ -2,8 +2,6 @@
 FROM alpine:3.6
 MAINTAINER Michal Lech "rootx@rootxnet.com"
 
-RUN echo 00001  # increment to invalidate docker cache
-
 ENV APP_SRCDIR=web
 ENV APP_HOMEDIR=/opt/rootxnet-web
 
@@ -25,4 +23,5 @@ EXPOSE 8000
 
 COPY ./docker-entrypoint.sh ./
 RUN chmod u+x ./docker-entrypoint.sh
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
+
