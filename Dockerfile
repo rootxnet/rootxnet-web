@@ -9,6 +9,7 @@ COPY $APP_SRCDIR $APP_HOMEDIR/web
 WORKDIR $APP_HOMEDIR
 COPY ["./requirements.txt", "./setup.py", "./tox.ini", "./"]
 
+# g++ required for pyzmq
 RUN apk update && \
     apk add python3-dev && \
     apk add g++ && \
