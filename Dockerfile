@@ -1,5 +1,5 @@
 # Set the base image to use to Ubuntu
-FROM ubuntu:14.04
+FROM alpine:3.6
 MAINTAINER Michal Lech "rootx@rootxnet.com"
 
 RUN echo 00001  # increment to invalidate docker cache
@@ -7,21 +7,19 @@ RUN echo 00001  # increment to invalidate docker cache
 ENV APP_SRCDIR=web
 ENV APP_HOMEDIR=/opt/rootxnet-web
 
-RUN apt-get -qq update
-RUN apt-get install -y python-dev python-setuptools
-RUN apt-get install -y g++ # required for pyzmq
-RUN easy_install pip
-RUN pip install --upgrade pip setuptools wheel virtualenv
-
 COPY $APP_SRCDIR $APP_HOMEDIR/web
 WORKDIR $APP_HOMEDIR
-RUN virtualenv --no-site-packages .env
-COPY ./requirements.txt ./
-COPY ./setup.py ./
-COPY ./tox.ini ./
-RUN . ./.env/bin/activate && pip install --upgrade -r requirements.txt
+COPY ["./requirements.txt", "./setup.py", "./tox.ini", "./"]
+
+RUN apk update && \
+    apk add python3-dev && \
+    apk add g++ && \
+    pip3 install --upgrade -r requirements.txt && \
+    apk del g++ && \
+    rm -rf /var/cache/apk/*
+
 WORKDIR $APP_HOMEDIR/web
-RUN . ../.env/bin/activate && python nano.py build_ipynb
+RUN python3 nano.py build_ipynb
 
 EXPOSE 8000
 

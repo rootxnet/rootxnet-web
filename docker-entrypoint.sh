@@ -1,7 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
-
-source $APP_HOMEDIR/.env/bin/activate
 
 if [[ $RUN_TESTS ]]; then
     cd $APP_HOMEDIR
