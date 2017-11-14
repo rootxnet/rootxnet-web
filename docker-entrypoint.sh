@@ -2,6 +2,8 @@
 
 
 if [[ $RUN_TESTS ]]; then
+    apk update
+    apk add g++
     cd $APP_HOMEDIR
     tox
 else
