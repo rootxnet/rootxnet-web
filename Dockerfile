@@ -1,5 +1,5 @@
 # Set the base image to use to Ubuntu
-FROM alpine:3.6
+FROM alpine:3.7
 MAINTAINER Michal Lech "rootx@rootxnet.com"
 
 ENV APP_SRCDIR=web
