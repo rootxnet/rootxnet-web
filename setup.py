@@ -15,7 +15,7 @@ setup(
     install_requires=[
         "Django==2.0.7",
         "jupyter==1.0.0",
-        "gunicorn==19.8.1",
+        "gunicorn==19.9.0",
         "whitenoise==3.3.1",
     ],
 )
