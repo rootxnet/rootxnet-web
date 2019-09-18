@@ -13,6 +13,7 @@ COPY ["./requirements.txt", "./setup.py", "./tox.ini", "./"]
 RUN apk update && \
     apk add python3-dev && \
     apk add g++ && \
+    apk add zeromq-dev && \
     pip3 install --upgrade -r requirements.txt && \
     apk del g++ && \
     rm -rf /var/cache/apk/*
