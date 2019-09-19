@@ -12,6 +12,7 @@ settings.configure(
     ROOT_URLCONF='urls',
     MIDDLEWARE_CLASSES=(
         "django.middleware.csrf.CsrfViewMiddleware",
+        'whitenoise.middleware.WhiteNoiseMiddleware',
     ),
     INSTALLED_APPS=(
         'django.contrib.staticfiles',
@@ -55,6 +56,4 @@ if __name__ == "__main__":
 
     execute_from_command_line(sys.argv)
 else:
-    from whitenoise.django import DjangoWhiteNoise
     application = get_wsgi_application()
-    application = DjangoWhiteNoise(application)
