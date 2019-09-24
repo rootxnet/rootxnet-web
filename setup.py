@@ -16,6 +16,6 @@ setup(
         "Django==2.2.5",
         "jupyter==1.0.0",
         "gunicorn==19.9.0",
-        "whitenoise==4.1.3",
+        "whitenoise==4.1.4",
     ],
 )
