@@ -13,7 +13,7 @@ setup(
     packages=_packages,
     include_package_data=True,
     install_requires=[
-        "Django==3.1.7",
+        "Django==3.1.8",
         "jupyter==1.0.0",
         "gunicorn==20.1.0",
         "whitenoise==5.2.0",
