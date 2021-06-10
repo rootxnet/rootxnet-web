@@ -1,4 +1,4 @@
-Django>=1.11.24,<2.0
+Django>=1.11.24,<3.0
 jupyter==1.0.0
 gunicorn==19.9.0
 whitenoise==4.1.3
